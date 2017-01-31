@@ -13,9 +13,7 @@ public class Board {
 
   public Board(Board that) {
     this.board = new int[that.getBoard().length][that.getBoard()[0].length];
-    for(int y = 0; y < that.getBoard()[0].length; y++) {
-      this.board[y] = that.getBoard()[y].clone();
-    }
+    this.setBoard(that);
   }
 
   public void setBoard(Board that) {
