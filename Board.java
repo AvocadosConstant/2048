@@ -1,4 +1,4 @@
-import java.util.Scanner; 
+import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
@@ -117,7 +117,7 @@ public class Board {
       slideCol(col);
     }
   }
-  
+
   public void slideLeft() {
     this.rotateCW();
     this.slideUp();
@@ -137,7 +137,7 @@ public class Board {
     this.rotateCW();
     this.rotateCW();
   }
-  
+
   public void print() {
     System.out.println("--------");
     for(int y = 0; y < board.length; y++) {
@@ -148,7 +148,7 @@ public class Board {
     }
     System.out.println("--------");
   }
-  
+
   public static void printCol(int[] col) {
     for(int i : col) System.out.println(i);
     System.out.println();
