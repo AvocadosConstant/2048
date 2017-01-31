@@ -1,4 +1,4 @@
-import java.util.Scanner; 
+import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
@@ -13,9 +13,7 @@ public class Board {
 
   public Board(Board that) {
     this.board = new int[that.getBoard().length][that.getBoard()[0].length];
-    for(int y = 0; y < that.getBoard()[0].length; y++) {
-      this.board[y] = that.getBoard()[y].clone();
-    }
+    this.setBoard(that);
   }
 
   public void setBoard(Board that) {
@@ -117,7 +115,7 @@ public class Board {
       slideCol(col);
     }
   }
-  
+
   public void slideLeft() {
     this.rotateCW();
     this.slideUp();
@@ -137,7 +135,7 @@ public class Board {
     this.rotateCW();
     this.rotateCW();
   }
-  
+
   public void print() {
     System.out.println("--------");
     for(int y = 0; y < board.length; y++) {
@@ -148,7 +146,7 @@ public class Board {
     }
     System.out.println("--------");
   }
-  
+
   public static void printCol(int[] col) {
     for(int i : col) System.out.println(i);
     System.out.println();
